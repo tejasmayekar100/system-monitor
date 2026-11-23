@@ -26,6 +26,9 @@ TOTAL_LINES=0
 ERROR_COUNT=0
 WARNING_COUNT=0
 INFO_COUNT=0					#improvement - count occurence of "info"
+DEBUG_COUNT=0         #owner debug count addition
+
+
 #Constants for top-words analysis
 readonly MIN_WORD_LENGTH=3			#ignore words shorter than 3 characters
 readonly TOP_N=3				#report only top 3 words
@@ -79,7 +82,11 @@ compute_statistics(){
 	ERROR_COUNT=$(count_matches "error" "$log_file")	#Find the count of "error"
 
 	WARNING_COUNT=$(count_matches "warning" "$log_file")	#Find the count of "warning"
+
 	INFO_COUNT=$(count_matches "info" "$log_file")		#Find the count of "info"
+
+	DEBUG_COUNT=$(count_matches "debug" "$log_file")	#Find the count of "debug"
+
 }
 
 
@@ -142,6 +149,7 @@ generate_report(){
 	echo "ERROR Count 	: $ERROR_COUNT"
 	echo "WARNING Count 	: $WARNING_COUNT"
 	echo "INFO Count	: $INFO_COUNT"		#improvement - printing
+	echo "DEBUG Count	: $DEBUG_COUNT"
 	echo ""
 
 	echo "$LINE_MINOR"
