@@ -123,6 +123,7 @@ BASIC STATISTICS
 Total Lines : 20
 ERROR Count : 5
 WARNING Count : 5
+INFO Count : 2
 
 ----------------------------------------
 TOP 3 FREQUENT WORDS
@@ -144,6 +145,7 @@ END OF REPORT
 | Total Lines | Number of lines in the log file |
 | ERROR Count | Lines containing the word `error` in any letter case |
 | WARNING Count | Lines containing the word `warning` in any letter case |
+| INFO Count | Lines containing the word `info` in any letter case |
 | Top 3 Frequent Words | Most frequent meaningful words with their counts |
 
 Meaningful words contain only letters, are at least 3 characters long, and exclude common stop words (such as `the`, `for`, `from`) and log levels (`info`, `error`, `warning`). Words with equal counts are listed alphabetically.
